@@ -20,7 +20,15 @@ class SearchBar extends React.Component {
             on every component render to the browser.
         */}
 
-          <input className="field" type="text" onChange={ this.onInputChange } />
+          {/* <input className="field" type="text" onChange={ this.onInputChange } /> */}
+
+          {/* use alternate syntax to achieve the same result but using an arrow function
+              declaring the event param and passing the event.target.value in the code block
+
+              e abbr instead of event.
+          */}
+
+          <input className="field" type="text" onChange={ e => { console.log(e.target.value) } } />
         </form>
       </div>)
     }
